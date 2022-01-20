@@ -1,0 +1,17 @@
+# Programas necesarios a instalar para el uso de la configuración de qtile
+
+1.- sudo pacman -S pacman-contrib
+2.- yay -S nerd-fonts-ubuntu-mono
+3.- pip install psutil
+4.- sudo pacman -S rofi
+5.- sudo pacman -S pcmanfm
+5.- sudo pacman -S alacritty
+6.- sudo pacman -S redshift
+7.- sudo pacman -S scrot
+8.- sudo pacman -S vifm
+9.- sudo pacman -S volumeicon
+10.- sudo pacman -S cbatticon
+11.- sudo pacman -S tk
+
+# monitores
+xrandr --output eDP1 --auto --rotate normal --pos 0x0 --output HDMI1 --auto --rotate normal --right-of eDP1
