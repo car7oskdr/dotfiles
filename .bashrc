@@ -111,3 +111,9 @@ source $OSH/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 alias kmonitor="xrandr --output eDP1 --auto --rotate normal --pos 0x0 --output HDMI1 --auto --rotate normal --right-of eDP1"
 alias apaga="shutdown now"
+alias v="vim"
+alias pt="python"
+alias subnet="cd ~/Proyectos/python/consola/subnetting"
+alias kes="setxkbmap -layout es"
+alias ken="setxkbmap -layout us"
+

@@ -68,6 +68,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "s", lazy.spawn("scrot")),
     ([mod, "shift"], "s", lazy.spawn("scrot -s")),
 
+    # code
+    ([mod], "c", lazy.spawn("code")),
+
     # ------------ Hardware Configs ------------
 
     # Volume
