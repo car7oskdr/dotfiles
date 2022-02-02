@@ -46,13 +46,14 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "m", lazy.spawn("rofi -show drun")),
+    ([mod], "r", lazy.spawn("rofi -show drun")),
 
     # Window Nav
-    ([mod, "shift"], "m", lazy.spawn("rofi -show")),
+    ([mod, "shift"], "r", lazy.spawn("rofi -show")),
 
     # Browser
-    ([mod], "b", lazy.spawn("firefox")),
+    ([mod], "f", lazy.spawn("firefox")),
+    ([mod], "g", lazy.spawn("google-chrome-stable")),
 
     # File Explorer
     ([mod], "e", lazy.spawn("pcmanfm")),
@@ -61,12 +62,15 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "Return", lazy.spawn("alacritty")),
 
     # Redshift
-    ([mod], "r", lazy.spawn("redshift -O 2400")),
-    ([mod, "shift"], "r", lazy.spawn("redshift -x")),
+    # ([mod], "r", lazy.spawn("redshift -O 2400")),
+    # ([mod, "shift"], "r", lazy.spawn("redshift -x")),
 
     # Screenshot
     ([mod], "s", lazy.spawn("scrot")),
     ([mod, "shift"], "s", lazy.spawn("scrot -s")),
+
+    # Mailspring
+    ([mod], "m", lazy.spawn("mailspring")),
 
     # code
     ([mod], "c", lazy.spawn("code")),

@@ -101,14 +101,7 @@ source $OSH/oh-my-bash.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-bash libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-bash
-# users are encouraged to define aliases within the OSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias bashconfig="mate ~/.bashrc"
-# alias ohmybash="mate ~/.oh-my-bash"
+# Alias
 alias kmonitor="xrandr --output eDP1 --auto --rotate normal --pos 0x0 --output HDMI1 --auto --rotate normal --right-of eDP1"
 alias apaga="shutdown now"
 alias v="vim"
@@ -116,4 +109,5 @@ alias pt="python"
 alias subnet="cd ~/Proyectos/python/consola/subnetting"
 alias kes="setxkbmap -layout es"
 alias ken="setxkbmap -layout us"
-
+alias instala="sudo pacman -S"
+alias actualiza="sudo pacman -Syu --noconfirm"
