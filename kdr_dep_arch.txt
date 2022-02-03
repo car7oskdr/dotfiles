@@ -13,6 +13,6 @@
 10.- sudo pacman -S cbatticon
 11.- sudo pacman -S tk
 12.- yay -S mailspring
-
+13.- sudo pacman -S pulseaudio-alsa
 # monitores
 xrandr --output eDP1 --auto --rotate normal --pos 0x0 --output HDMI1 --auto --rotate normal --right-of eDP1
