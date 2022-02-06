@@ -24,6 +24,7 @@ Plugin 'honza/vim-snippets'
 " Detección de errores python.
 Plugin 'nvie/vim-flake8'
 
+
 call vundle#end()
 
 " ======================================================================
@@ -83,6 +84,7 @@ set mouse=a " Integración del mouse.
 set cursorline " Resalta la linea actual.
 set colorcolumn=72 " Muestra la columna limite a 80.
 " Indentación.
+set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
