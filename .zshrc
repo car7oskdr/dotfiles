@@ -43,7 +43,7 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-source /home/s4vitar/powerlevel10k/powerlevel10k.zsh-theme
+source /home/keder/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
@@ -73,6 +73,7 @@ alias lkey='cat ~/.keylab.txt'
 alias kping-'ping -c 7 archlinux.org'
 alias promociones='cd ~/Proyectos/python/PromocionesErika'
 alias dpython='cd ~/Proyectos/python'
+alias gst='git status'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -141,3 +142,5 @@ function rmk(){
 
 # Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
 (( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme

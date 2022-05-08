@@ -123,3 +123,5 @@ alias kddocker="systemctl stop docker"
 alias kidocker="systemctl start docker"
 alias promociones="cd /home/keder/Proyectos/python/PromocionesErika"
 alias dpython="cd /home/keder/Proyectos/python"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
