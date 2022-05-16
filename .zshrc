@@ -74,6 +74,7 @@ alias kping-'ping -c 7 archlinux.org'
 alias promociones='cd ~/Proyectos/python/PromocionesErika'
 alias dpython='cd ~/Proyectos/python'
 alias gst='git status'
+alias kping='ping -c 7 archlinux.org'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
