@@ -12,7 +12,12 @@
 10.- sudo pacman -S cbatticon
 11.- sudo pacman -S tk
 12.- yay -S mailspring
+# dependencia mailspring
+12.1.- sudo pacman -S gnome-keyring
 13.- sudo pacman -S pulseaudio-alsa
 14.- sudo pacman -S kitty
+15.- sudo pacman -S ipython
+16.- pip install ipdb
 # monitores
 xrandr --output eDP1 --auto --rotate normal --pos 0x0 --output HDMI1 --auto --rotate normal --right-of eDP1
+
