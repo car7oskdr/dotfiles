@@ -76,6 +76,11 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # code
     ([mod], "c", lazy.spawn("code")),
 
+    # kayes español
+    ([mod], "i", lazy.spawn("setxkbmap -layout es")),
+    ([mod, "shift"], "i", lazy.spawn("setxkbmap -layout us")),
+
+
     # ------------ Hardware Configs ------------
 
     # Volume
