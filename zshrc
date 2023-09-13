@@ -1,147 +1,95 @@
-# Fix the Java Problem
-export _JAVA_AWT_WM_NONREPARENTING=1
+export ZSH="$HOME/.oh-my-zsh"
 
-# Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+#ZSH_THEME="bira"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+
+
+zstyle ':omz:update' mode auto      # update automatically without asking
+
+# Uncomment the following line to change how often to auto-update (in days).
+zstyle ':omz:update' frequency 7
+
+
+# Uncomment the following line to enable command auto-correction.
+ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
 fi
 
-# Set up the prompt
-
-autoload -Uz promptinit
-promptinit
-prompt adam1
-
-setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
-
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
-
-# Use modern completion system
-autoload -Uz compinit
-compinit
-
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' verbose true
-
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-source /home/keder/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-# Manual configuration
-
-PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
-
-# Manual aliases
-alias ll='lsd -lh --group-dirs=first'
-alias la='lsd -a --group-dirs=first'
-alias l='lsd --group-dirs=first'
-alias lla='lsd -lha --group-dirs=first'
-alias ls='lsd --group-dirs=first'
-alias cat='bat'
+# kdr aliases
+alias kzsh='source ~/.zshrc'
+alias x='exit'
 alias c='clear'
-# car7os
-alias apaga='shutdown now'
-alias actualiza='sudo pacman -Syu --noconfirm'
-alias kmonitor='xrandr --output eDP1 --auto --rotate normal --pos 0x0 --output HDMI1 --auto --rotate normal --above eDP1'
+alias actualiza='sudo apt update && sudo apt upgrade && sudo apt full-upgrade'
 alias v='vim'
-alias pt='python'
-alias kes='setxkbmap -layout es'
-alias ken='setxkbmap -layout us'
-alias gkey='cat ~/.keygithub.txt'
-alias lkey='cat ~/.keylab.txt'
-alias kping-'ping -c 7 archlinux.org'
-alias promociones='cd ~/Proyectos/python/PromocionesErika'
-alias dpython='cd ~/Proyectos/python'
+alias co='code .'
+alias credential='cat ~/sens/credentials.txt'
+alias pld='cat ~/Documentos/apuntes/pldLunes/pld.txt'
+alias kdocker='docker container prune -f && docker volume prune -f && docker image prune -f'
+alias cat='batcat'
+# navegacion aliases
+alias 1='cd ..'
+alias repos='cd ~/repos'
+alias krepos='cd ~/repos/kdr'
+alias dotf='cd ~/repos/kdr/dotfiles'
+alias prepos='cd ~/repos/progresar'
+alias cliente='cd ~/repos/progresar/cliente'
+alias clienteco='cd ~/repos/progresar/cliente && code .'
+alias alejandria='cd ~/repos/progresar/alejandria'
+alias alejandriaco='cd ~/repos/progresar/alejandria && code .'
+alias progresar='cd ~/repos/podemos/podemos'
+alias progresarco='cd ~/repos/podemos/podemos && code .'
+alias organigrama='cd ~/repos/progresar/organigrama'
+alias organigramaco='cd ~/repos/progresar/organigrama && code .'
+alias producto='cd ~/repos/progresar/producto'
+alias productoco='cd ~/repos/progresar/producto && code .'
+alias motor='cd ~/repos/progresar/motor_validaciones'
+alias motorco='cd ~/repos/progresar/motor_validaciones && code .'
+# github aliases
+alias develop='git fetch upstream && git merge upstream/develop && git push origin develop'
+alias kmain='git fetch upstream && git merge upstream/main && git push origin main'
+alias kmaster='git fetch upstream && git merge upstream/master && git push origin master'
 alias gst='git status'
-alias kping='ping -c 7 archlinux.org'
+alias gg='git log --graph --decorate --all'
+alias gl='git log'
+alias gll="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
+alias go='git log --oneline --decorate'
+alias gd='git diff --color'
+alias grt='git restore .'
+alias gch='git checkout'
+alias lg='lazygit'
+alias gch='git checkout'
+alias gchb='git checkout -b'
+alias gbr='git branch'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# enable auto-suggestions based on the history
+if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+    . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    # change suggestion color
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
+fi
 
-# Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-sudo/sudo.plugin.zsh
-
-# Functions
-function mkt(){
-	mkdir {nmap,content,exploits,scripts}
-}
-
-# Extract nmap information
-function extractPorts(){
-	ports="$(cat $1 | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
-	ip_address="$(cat $1 | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
-	echo -e "\n[*] Extracting information...\n" > extractPorts.tmp
-	echo -e "\t[*] IP Address: $ip_address"  >> extractPorts.tmp
-	echo -e "\t[*] Open ports: $ports\n"  >> extractPorts.tmp
-	echo $ports | tr -d '\n' | xclip -sel clip
-	echo -e "[*] Ports copied to clipboard\n"  >> extractPorts.tmp
-	cat extractPorts.tmp; rm extractPorts.tmp
-}
-
-# Set 'man' colors
-function man() {
-    env \
-    LESS_TERMCAP_mb=$'\e[01;31m' \
-    LESS_TERMCAP_md=$'\e[01;31m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    man "$@"
-}
-
-# fzf improvement
-function fzf-lovely(){
-
-	if [ "$1" = "h" ]; then
-		fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
- 	                echo {} is a binary file ||
-	                 (bat --style=numbers --color=always {} ||
-	                  highlight -O ansi -l {} ||
-	                  coderay {} ||
-	                  rougify {} ||
-	                  cat {}) 2> /dev/null | head -500'
-
-	else
-	        fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
-	                         echo {} is a binary file ||
-	                         (bat --style=numbers --color=always {} ||
-	                          highlight -O ansi -l {} ||
-	                          coderay {} ||
-	                          rougify {} ||
-	                          cat {}) 2> /dev/null | head -500'
-	fi
-}
-
-function rmk(){
-	scrub -p dod $1
-	shred -zun 10 -v $1
-}
-
-# Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
-(( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

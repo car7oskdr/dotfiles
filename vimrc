@@ -25,9 +25,39 @@ Plugin 'honza/vim-snippets'
 Plugin 'nvie/vim-flake8'
 " copilot
 Plugin 'github/copilot.vim'
-
+" lineas guia
+Plugin 'Yggdroot/indentLine'
+" Bufferline
+Plugin 'bling/vim-bufferline'
+" Iconos para nerdtree.
+Plugin 'ryanoasis/vim-devicons'
+" Plugin para resaltar cambios en el codigo.
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
+
+" ======================================================================
+" Configuración de NERDTree
+let loaded_nerdtree = 1
+let NERDTreeAutoCenter = 1
+let NERDTreeNaturalSort = 1
+let NERDTreeIgnore = ['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$', '\~$'] " Archivos a ignorar
+let NERDTreeShowBookmarks = 1
+let NERDTreeShowHidden = 1
+let NERDTreeShowLineNumbers = 1
+let NERDTreeWinPos = 'right'
+let NerdTreeShowDevIcons = 1
+" ======================================================================
+" Configuración de bufferline
+let g:bufferline_echo = 1
+let g:bufferline_modified = '✥'
+let g:bufferline_show_bufnr = 1
+" ======================================================================
+" Configuración de Indent Guides
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_color_term = 239  " Color de las líneas guía en terminales
+let g:indentLine_color_gui = '#7EABE5'  " Color de las líneas guía en GUI
+let g:indentLine_showFirstIndentLevel = 1  " Mostrar línea guía en el primer nivel de sangría
 
 " ======================================================================
 " Airline config.
@@ -84,6 +114,7 @@ set title " Nopmbre del archivo en la ventana de la terminal.
 set number relativenumber " Indices normales y relativos.
 set mouse=a " Integración del mouse.
 set cursorline " Resalta la linea actual.
+set cursorcolumn " Resalta la columna actual.
 set colorcolumn=72 " Muestra la columna limite a 80.
 " Indentación.
 set smartindent
@@ -97,6 +128,16 @@ set ignorecase " Ignora mayusculas al hacer una busqueda.
 set smartcase " No ignora mayusculas si la palabra contiene mayusculas.
 set spelllang=en,es " Corregir palabras usando dic's en inglés y español.
 set termguicolors " Activar true colors en la terminal.
+set incsearch " Busqueda incremental.
+set ignorecase " Ignora mayusculas al hacer una busqueda.
+set smartcase " No ignora mayusculas si la palabra contiene mayusculas.
+set showmatch " Muestra el parentesis que cierra.
+set showcmd " Muestra el comando que se esta escribiendo.
+set hlsearch " Resalta la busqueda.
+set history=1000 " Historial de comandos.
+set wildmenu " Autocompletado en el menu.
+set wildmode=list:longest " Autocompletado en el menu.
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx " Archivos a ignorar en el autocompletado.
 colorscheme sonokai " Tema.
 
 " ======================================================================
