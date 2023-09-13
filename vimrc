@@ -23,6 +23,8 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 " Detección de errores python.
 Plugin 'nvie/vim-flake8'
+" copilot
+Plugin 'github/copilot.vim'
 
 
 call vundle#end()

@@ -41,18 +41,14 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "control"], "r", lazy.restart()),
 
     ([mod, "control"], "q", lazy.shutdown()),
-    ([mod], "r", lazy.spawncmd()),
+    ([mod], "t", lazy.spawncmd()),
 
     # ------------ App Configs ------------
 
     # Menu
     ([mod], "r", lazy.spawn("rofi -show drun")),
 
-    # Window Nav
-    ([mod, "shift"], "r", lazy.spawn("rofi -show")),
-
     # Browser
-    ([mod], "f", lazy.spawn("firefox")),
     ([mod], "g", lazy.spawn("google-chrome-stable")),
 
     # File Explorer
@@ -60,11 +56,6 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),
-    ([mod, "shift"], "Return", lazy.spawn("kitty")),
-
-    # Redshift
-    # ([mod], "r", lazy.spawn("redshift -O 2400")),
-    # ([mod, "shift"], "r", lazy.spawn("redshift -x")),
 
     # Screenshot
     ([mod], "s", lazy.spawn("scrot")),
@@ -72,14 +63,16 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Mailspring
     ([mod], "m", lazy.spawn("mailspring")),
+    # Slack
+    ([mod, "shift"], "m", lazy.spawn("slack")),
 
     # code
     ([mod], "c", lazy.spawn("code")),
 
     # kayes español
     ([mod], "i", lazy.spawn("setxkbmap -layout es")),
+    # kayes english
     ([mod, "shift"], "i", lazy.spawn("setxkbmap -layout us")),
-
 
     # ------------ Hardware Configs ------------
 

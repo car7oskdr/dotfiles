@@ -26,9 +26,9 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
 def powerline(fg="light", bg="dark"):
     return widget.TextBox(
         **base(fg, bg),
-        text="", # Icon: nf-oct-triangle_left
-        fontsize=37,
-        padding=-2
+        text="", # Icon: nf-oct-triangle_left
+        fontsize=32,
+        padding=-3
     )
 
 
@@ -86,6 +86,12 @@ primary_widgets = [
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
     
     widget.Net(**base(bg='color3'), interface='wlan0'),
+    
+    powerline('color3', 'color4'),
+
+    icon(bg="color3", text=' '),
+    
+    widget.Wlan(**base(bg='color3')),
 
     powerline('color2', 'color3'),
 

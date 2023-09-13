@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xrandr --output eDP1 --auto --rotate normal --pos 0x0 --output HDMI1 --auto --rotate normal --above eDP1 &
+xrandr --output eDP --auto --rotate normal --pos 0x0 --output HDMI-A-0 --auto --rotate normal --above eDP &
 alacritty &
 
 # systray battery icon
