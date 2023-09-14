@@ -33,6 +33,8 @@ Plugin 'bling/vim-bufferline'
 Plugin 'ryanoasis/vim-devicons'
 " Plugin para resaltar cambios en el codigo.
 Plugin 'airblade/vim-gitgutter'
+" Plugin para tmux.
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 
@@ -179,3 +181,17 @@ nnoremap <leader>q :bdelete<CR>
 " Abrir NERDTree con <líder> + n
 nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>nc :NERDTreeClose<CR>
+
+" Split veritical.
+nnoremap <leader>vs :vsplit<CR>
+" Split horizontal.
+nnoremap <leader>hs :split<CR>
+
+" Config para tmux.
+let g:tmux_navigator_no_mappings = 1
+
+noremap <silent> {Left-Mapping} :<C-U>TmuxNavigateLeft<cr>
+noremap <silent> {Down-Mapping} :<C-U>TmuxNavigateDown<cr>
+noremap <silent> {Up-Mapping} :<C-U>TmuxNavigateUp<cr>
+noremap <silent> {Right-Mapping} :<C-U>TmuxNavigateRight<cr>
+noremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
