@@ -190,8 +190,9 @@ nnoremap <leader>hs :split<CR>
 " Config para tmux.
 let g:tmux_navigator_no_mappings = 1
 
-noremap <silent> {Left-Mapping} :<C-U>TmuxNavigateLeft<cr>
-noremap <silent> {Down-Mapping} :<C-U>TmuxNavigateDown<cr>
-noremap <silent> {Up-Mapping} :<C-U>TmuxNavigateUp<cr>
-noremap <silent> {Right-Mapping} :<C-U>TmuxNavigateRight<cr>
-noremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
+noremap <silent> <C-h> :<C-U>TmuxNavigateLeft<cr>
+noremap <silent> <C-j> :<C-U>TmuxNavigateDown<cr>
+noremap <silent> <C-k> :<C-U>TmuxNavigateUp<cr>
+noremap <silent> <C-l> :<C-U>TmuxNavigateRight<cr>
+noremap <silent> <C-n> :<C-U>!tmux split-window -h<CR>
+noremap <silent> <C-v> :<C-U>!tmux split-window -v<CR>
