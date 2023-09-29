@@ -117,7 +117,7 @@ set number relativenumber " Indices normales y relativos.
 set mouse=a " Integración del mouse.
 set cursorline " Resalta la linea actual.
 set cursorcolumn " Resalta la columna actual.
-set colorcolumn=72 " Muestra la columna limite a 80.
+set colorcolumn=121 " Muestra la columna limite a 121.
 " Indentación.
 set smartindent
 set tabstop=4
