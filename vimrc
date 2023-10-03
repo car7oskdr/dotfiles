@@ -8,6 +8,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Tema para nvim.
 Plugin 'sainnhe/sonokai'
+Plugin 'morhetz/gruvbox'
+Plugin 'sainnhe/everforest'
+Plugin 'tomasr/molokai'
+Plugin 'ayu-theme/ayu-vim'
+Plugin 'ajmwagar/vim-deus'
 "   Airline.
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -140,7 +145,16 @@ set history=1000 " Historial de comandos.
 set wildmenu " Autocompletado en el menu.
 set wildmode=list:longest " Autocompletado en el menu.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx " Archivos a ignorar en el autocompletado.
-colorscheme sonokai " Tema.
+"colorscheme sonokai " Tema.
+"colorscheme darkblue
+"colorscheme retrobox
+"colorscheme sorbet
+"colorscheme gruvbox
+"colorscheme ayu
+"colorscheme molokai
+"colorscheme everforest
+colorscheme deus
+set background=dark    " Setting dark mode
 
 " ======================================================================
 
