@@ -49,7 +49,7 @@ alias pld='cat ~/Documentos/apuntes/pldLunes/pld.txt'
 alias kdocker='docker container prune -f && docker volume prune -f && docker image prune -f'
 alias cat='batcat'
 alias gitkeder='git config --global core.editor vim && git config --global user.email "carloscvl@hotmail.com" && git config --global --list'
-alias gitpodemos='git config --global core.editor "code --wait" && git config --global user.email "c.vazquez@podemos.mx" && git config --global --list'
+alias gitpodemos='git config --global core.editor vim && git config --global user.email "c.vazquez@podemos.mx" && git config --global --list'
 # entornos aliases
 alias podemos37='source /home/car7os/podemos37/bin/activate'
 # navegacion aliases
