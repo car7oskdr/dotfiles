@@ -1,19 +1,23 @@
+# Enable the subsequent settings only in interactive sessions
+case $- in
+  *i*) ;;
+    *) return;;
+esac
+
 # Path to your oh-my-bash installation.
-export OSH=/home/keder/.oh-my-bash
+export OSH='/home/car7os/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 #OSH_THEME="font"
-#OSH_THEME="powerline"
 OSH_THEME="powerline-multiline"
-set -o vi
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+OMB_CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+# OMB_HYPHEN_SENSITIVE="false"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -28,23 +32,50 @@ set -o vi
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# Uncomment the following line if you don't want the repository to be considered dirty
+# if there are untracked files.
+# SCM_GIT_DISABLE_UNTRACKED_DIRTY="true"
+
+# Uncomment the following line if you want to completely ignore the presence
+# of untracked files in the repository.
+# SCM_GIT_IGNORE_UNTRACKED="true"
+
 # Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+# stamp shown in the history command output.  One of the following values can
+# be used to specify the timestamp format.
+# * 'mm/dd/yyyy'     # mm/dd/yyyy + time
+# * 'dd.mm.yyyy'     # dd.mm.yyyy + time
+# * 'yyyy-mm-dd'     # yyyy-mm-dd + time
+# * '[mm/dd/yyyy]'   # [mm/dd/yyyy] + [time] with colors
+# * '[dd.mm.yyyy]'   # [dd.mm.yyyy] + [time] with colors
+# * '[yyyy-mm-dd]'   # [yyyy-mm-dd] + [time] with colors
+# If not set, the default value is 'yyyy-mm-dd'.
+# HIST_STAMPS='yyyy-mm-dd'
+
+# Uncomment the following line if you do not want OMB to overwrite the existing
+# aliases by the default OMB aliases defined in lib/*.sh
+# OMB_DEFAULT_ALIASES="check"
 
 # Would you like to use another custom folder than $OSH/custom?
 # OSH_CUSTOM=/path/to/new-custom-folder
+
+# To disable the uses of "sudo" by oh-my-bash, please set "false" to
+# this variable.  The default behavior for the empty value is "true".
+OMB_USE_SUDO=true
+
+# To enable/disable display of Python virtualenv and condaenv
+OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
+# OMB_PROMPT_SHOW_PYTHON_VENV=false # disable
 
 # Which completions would you like to load? (completions can be found in ~/.oh-my-bash/completions/*)
 # Custom completions may be added to ~/.oh-my-bash/custom/completions/
@@ -75,12 +106,12 @@ plugins=(
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
 # Custom plugins may be added to ~/.oh-my-bash/custom/plugins/
-# Example format: 
+# Example format:
 #  if [ "$DISPLAY" ] || [ "$SSH" ]; then
 #      plugins+=(tmux-autoattach)
 #  fi
 
-source $OSH/oh-my-bash.sh
+source "$OSH"/oh-my-bash.sh
 
 # User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -101,27 +132,29 @@ source $OSH/oh-my-bash.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Alias
-# alias kmonitor="xrandr --output eDP1 --auto --rotate normal --pos 0x0 --output HDMI1 --auto --rotate normal --right-of eDP1"
-alias kmonitor="xrandr --output eDP1 --auto --rotate normal --pos 0x0 --output HDMI1 --auto --rotate normal --above eDP1"
-alias apaga="shutdown now"
-alias v="vim"
-alias pt="python"
-alias subnet="cd ~/Proyectos/python/consola/subnetting"
-alias kes="setxkbmap -layout es"
+# Set personal aliases, overriding those provided by oh-my-bash libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-bash
+# users are encouraged to define aliases within the OSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias bashconfig="mate ~/.bashrc"
+# alias ohmybash="mate ~/.oh-my-bash"
+#kdr alias
+alias update='sudo pacman -Syu --noconfirm'
+alias install='sudo pacman -S'
+alias apaga='shutdown now'
+alias kes="setxkbmap -layout latam"
 alias ken="setxkbmap -layout us"
-alias instala="sudo pacman -S"
-alias actualiza="sudo pacman -Syu --noconfirm"
-alias gkey="cat ~/.keygithub.txt"
-alias lkey="cat ~/.keylab.txt"
 alias kping="ping -c 7 archlinux.org"
-alias kinginx="systemctl start nginx"
-alias kdnginx="systemctl stop nginx"
-alias ksnginx="systemctl status nginx"
-alias ksdocker="systemctl status docker"
-alias kddocker="systemctl stop docker"
-alias kidocker="systemctl start docker"
-alias promociones="cd /home/keder/Proyectos/python/PromocionesErika"
-alias dpython="cd /home/keder/Proyectos/python"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+alias x='exit'
+alias 1='cd ../'
+alias v='vim'
+alias repos='cd ~/repositories'
+alias pt39='source /home/car7os/python39/bin/activate'
+alias pt37='source /home/car7os/python37/bin/activate'
+alias motor='cd /home/car7os/repositories/podemos/motor_validaciones'
+alias develop='git fetch upstream && git merge upstream/develop && git push origin develop'
+#gitkdr alias
+alias gitkeder='git config --global user.email "carloscvl@hotmail.com" && git config --global --list'
+alias gitpodemos='git config --global user.email "c.vazquez@podemos.mx" && git config --global --list'
