@@ -9,11 +9,11 @@ export OSH='/home/car7os/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-#OSH_THEME="font"
-OSH_THEME="powerline-multiline"
+OSH_THEME="font"
+#OSH_THEME="powerline-multiline"
 
 # Uncomment the following line to use case-sensitive completion.
-OMB_CASE_SENSITIVE="true"
+#OB_CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -142,19 +142,35 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 #kdr alias
 alias update='sudo pacman -Syu --noconfirm'
-alias install='sudo pacman -S'
+alias instala='sudo pacman -S'
 alias apaga='shutdown now'
 alias kes="setxkbmap -layout latam"
 alias ken="setxkbmap -layout us"
 alias kping="ping -c 7 archlinux.org"
 alias x='exit'
-alias 1='cd ../'
 alias v='vim'
-alias repos='cd ~/repositories'
+alias vbash='vim ~/.bashrc'
+alias hv='vim ~/.config/hypr/hyprland.conf'
+alias pt='python'
 alias pt39='source /home/car7os/python39/bin/activate'
 alias pt37='source /home/car7os/python37/bin/activate'
+alias kbash='source ~/.bashrc'
+alias fetch='fetchs=("nitch" "rxfetch" "nerdfetch" "neofetch"); cmd="${fetchs[$(shuf -i 0-3 -n 1)]}"; $cmd'
+
+#dir alias
+alias 1='cd ../'
+alias repos='cd ~/repositories'
+alias krepos='cd ~/repositories/kdrepos'
+alias dconfig='cd ~/.config'
+alias dkitty='cd ~/.config/kitty'
+alias dhyp='cd ~/.config/hypr'
 alias motor='cd /home/car7os/repositories/podemos/motor_validaciones'
-alias develop='git fetch upstream && git merge upstream/develop && git push origin develop'
 #gitkdr alias
+alias develop='git fetch upstream && git merge upstream/develop && git push origin develop'
 alias gitkeder='git config --global user.email "carloscvl@hotmail.com" && git config --global --list'
 alias gitpodemos='git config --global user.email "c.vazquez@podemos.mx" && git config --global --list'
+alias lg='lazygit'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
