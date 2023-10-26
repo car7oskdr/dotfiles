@@ -144,27 +144,36 @@ source "$OSH"/oh-my-bash.sh
 alias update='sudo pacman -Syu --noconfirm'
 alias instala='sudo pacman -S'
 alias apaga='shutdown now'
-alias kes="setxkbmap -layout latam"
-alias ken="setxkbmap -layout us"
 alias kping="ping -c 7 archlinux.org"
 alias x='exit'
 alias v='vim'
 alias vbash='vim ~/.bashrc'
-alias hv='vim ~/.config/hypr/hyprland.conf'
+alias hv='cd ~/.config/hypr/hyprland.conf && vim'
 alias pt='python'
 alias pt39='source /home/car7os/python39/bin/activate'
 alias pt37='source /home/car7os/python37/bin/activate'
 alias kbash='source ~/.bashrc'
+alias ktop='glances'
 alias fetch='fetchs=("nitch" "rxfetch" "nerdfetch" "neofetch"); cmd="${fetchs[$(shuf -i 0-3 -n 1)]}"; $cmd'
+# keyboard alias
+# hyprland
+alias lc='hyprctl switchxkblayout at-translated-set-2-keyboard next'
+# others
+alias kes="setxkbmap -layout latam"
+alias ken="setxkbmap -layout us"
 
 #dir alias
 alias 1='cd ../'
 alias repos='cd ~/repositories'
 alias krepos='cd ~/repositories/kdrepos'
+alias dotfiles='cd ~/repositories/kdrepos/dotfiles'
 alias dconfig='cd ~/.config'
 alias dkitty='cd ~/.config/kitty'
 alias dhyp='cd ~/.config/hypr'
+#dir podemos alias
 alias motor='cd /home/car7os/repositories/podemos/motor_validaciones'
+alias cliente='cd /home/car7os/repositories/podemos/cliente'
+alias producto='cd /home/car7os/repositories/podemos/producto'
 #gitkdr alias
 alias develop='git fetch upstream && git merge upstream/develop && git push origin develop'
 alias gitkeder='git config --global user.email "carloscvl@hotmail.com" && git config --global --list'
@@ -174,3 +183,5 @@ alias lg='lazygit'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+fetch
