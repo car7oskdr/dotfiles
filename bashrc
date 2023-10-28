@@ -9,7 +9,8 @@ export OSH='/home/car7os/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="font"
+#OSH_THEME="font"
+OSH_THEME="powerline"
 #OSH_THEME="powerline-multiline"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -142,19 +143,21 @@ source "$OSH"/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 #kdr alias
 alias update='sudo pacman -Syu --noconfirm'
+alias updateyay='yay -Syu --noconfirm'
 alias instala='sudo pacman -S'
 alias apaga='shutdown now'
 alias kping="ping -c 7 archlinux.org"
 alias x='exit'
 alias v='vim'
 alias vbash='vim ~/.bashrc'
-alias hv='cd ~/.config/hypr/hyprland.conf && vim'
+alias vhypr='cd ~/.config/hypr && vim'
 alias pt='python'
 alias pt39='source /home/car7os/python39/bin/activate'
 alias pt37='source /home/car7os/python37/bin/activate'
 alias kbash='source ~/.bashrc'
 alias ktop='glances'
 alias fetch='fetchs=("nitch" "rxfetch" "nerdfetch" "neofetch"); cmd="${fetchs[$(shuf -i 0-3 -n 1)]}"; $cmd'
+alias velint='speedtest-cli --simple'
 # keyboard alias
 # hyprland
 alias lc='hyprctl switchxkblayout at-translated-set-2-keyboard next'
@@ -174,6 +177,7 @@ alias dhyp='cd ~/.config/hypr'
 alias motor='cd /home/car7os/repositories/podemos/motor_validaciones'
 alias cliente='cd /home/car7os/repositories/podemos/cliente'
 alias producto='cd /home/car7os/repositories/podemos/producto'
+alias podemos='cd /home/car7os/repositories/podemos/podemos'
 #gitkdr alias
 alias develop='git fetch upstream && git merge upstream/develop && git push origin develop'
 alias gitkeder='git config --global user.email "carloscvl@hotmail.com" && git config --global --list'
@@ -184,4 +188,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+#export PYTHONPATH to podemos and mambupy
+export PYTHONPATH=/opt/podemosprogresar/lib/python
+export PYTHONPATH=$PYTHONPATH:/opt/mambupy/mambupy
 fetch
