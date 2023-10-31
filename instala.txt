@@ -1,77 +1,18 @@
-  243  2023-10-27 23:20:03 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
-  350  2023-10-16 15:58:39 pip install virtualenv
-  353  2023-10-16 16:00:05 pip install virtualenv
-  355  2023-10-16 16:02:51 pip install venv
-  356  2023-10-16 16:03:14 pip3.11 install virtualenv
-  399  2023-10-16 16:19:08 make install
-  405  2023-10-16 16:24:25 pip install virtualenv
-  406  2023-10-16 16:24:34 make install
-  418  2023-10-16 16:44:09 make install
-  495  2023-10-17 11:10:52 pip install -r requirements.txt
-  496  2023-10-17 11:11:16 pip install --upgrade pip
-  497  2023-10-17 11:11:19 pip install -r requirements.txt
-  505  2023-10-17 11:14:51 pip install -r requirements.txt
-  519  2023-10-17 11:22:10 make install
-  551  2023-10-17 12:59:48 make install
-  589  2023-10-18 10:40:14 make install
-  599  2023-10-18 13:37:39 make install
-  687  2023-10-19 20:25:46 install less --noconfirm
-  696  2023-10-19 20:27:22 instala less
-  704  2023-10-19 20:30:29 instala lazygit --noconfirm
-  870  2023-10-20 03:22:20 instala pocketfecth
-  896  2023-10-20 10:34:58 instala nefetch --noconfirm
-  897  2023-10-20 10:35:10 instala neofetch --noconfirm
-  902  2023-10-20 10:40:49 instala pfetch --noconfirm
-  930  2023-10-20 11:40:59 instala wofi --noconfirm
-  932  2023-10-20 11:43:09 instala nemo --noconfirm
-  967  2023-10-20 12:11:37 make install
-  973  2023-10-20 12:12:17 make install
- 1017  2023-10-20 13:54:15 npm install -g serverless
- 1018  2023-10-20 13:56:37 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
- 1026  2023-10-20 14:00:01 nvm install v18.18.2
- 1029  2023-10-20 14:01:40 npm install -g serverless
- 1113  2023-10-21 13:09:28 instala nim --noconfirm
- 1212  2023-10-21 13:49:42 _ pacman install tree --noconfirm
- 1213  2023-10-21 13:49:55 instala tree --noconfirm
- 1231  2023-10-21 14:01:30 install neofetch --noconfirm
- 1232  2023-10-21 14:01:46 install neofetch
- 1332  2023-10-22 01:43:14 instala feh --noconfirm
- 1410  2023-10-23 01:51:12 instala waybar --noconfirm
- 1427  2023-10-23 02:21:31 install sway --noconfirm
- 1428  2023-10-23 02:21:46 instala sway --noconfirm
- 1487  2023-10-23 23:41:26 instala scrot --noconfirm
- 1497  2023-10-24 00:19:18 instala blueman --noconfirm
- 1592  2023-10-24 10:15:25 instala setxkbmap
- 1593  2023-10-24 10:15:42 instala xsetxkbmap
- 1649  2023-10-24 12:53:17 pip install glances
- 1652  2023-10-24 12:54:42 instala glances --noconfirm
- 1697  2023-10-24 16:22:09 instala brightnessctl --noconfirm
- 1733  2023-10-25 10:22:31 instala ipython --noconfirm
- 1797  2023-10-25 13:28:44 instala sway --noconfirm
- 1868  2023-10-25 15:07:21 instala swaylock --noconfirm
- 2033  2023-10-26 10:33:16 make install
- 2085  2023-10-26 15:40:42 npm install --global fast-cli
- 2089  2023-10-26 15:43:31 pip install speedtest-cli
- 2091  2023-10-26 15:44:11 instala speedtes-cli
- 2093  2023-10-26 15:44:53 instala speedtest-cli
- 2100  2023-10-26 15:48:35 npm uninstall -g fast-cli
- 2115  2023-10-27 00:58:46 instala pamixer --noconfirm
- 2225  2023-10-27 14:16:58 pip install -r requirements.txt 
- 2226  2023-10-27 14:19:18 pip install --upgrade pip
- 2229  2023-10-27 14:20:19 python -m pip install --upgrade pip
- 2230  2023-10-27 14:20:32 pip install -r requirements.txt
- 2368  2023-10-27 16:19:55 pip install -r requirements.txt 
- 2375  2023-10-27 16:36:06 pip install wkhtmltopdf
- 2430  2023-10-27 17:13:48 pip install wkhtmltopdf
- 2439  2023-10-27 17:20:50 pip install requirements.txt 
- 2440  2023-10-27 17:21:12 pip install -r requirements.txt 
- 2489  2023-10-27 23:21:29 instala transmission --noconfirm
- 2490  2023-10-27 23:22:00 instala transmission-gtk --noconfirm
- 2492  2023-10-27 23:23:14 history | grep instala
- 2493  2023-10-27 23:24:42 history | grep instala > instala.txt
- 2494  2023-10-27 23:24:48 cat instala.txt 
- 2495  2023-10-27 23:25:13 history | grep "pacman install"
- 2496  2023-10-27 23:25:52 history | grep "yay install"
- 2497  2023-10-27 23:26:09 history | grep instal
- 2498  2023-10-27 23:26:40 rm instala.txt 
- 2499  2023-10-27 23:26:57 history | grep instal > instala.txt
+install less --noconfirm
+instala less
+instala lazygit --noconfirm
+instala pocketfecth
+instala nefetch --noconfirm
+instala pfetch --noconfirm
+instala nim --noconfirm
+instala tree --noconfirm
+instala feh --noconfirm
+instala waybar --noconfirm
+instala blueman --noconfirm
+instala glances --noconfirm
+instala brightnessctl --noconfirm
+instala ipython --noconfirm
+instala swaylock --noconfirm
+instala speedtest-cli
+instala pamixer --noconfirm
+instala transmission-gtk --noconfirm

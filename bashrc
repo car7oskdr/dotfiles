@@ -191,4 +191,4 @@ export NVM_DIR="$HOME/.nvm"
 #export PYTHONPATH to podemos and mambupy
 export PYTHONPATH=/opt/podemosprogresar/lib/python
 export PYTHONPATH=$PYTHONPATH:/opt/mambupy/mambupy
-fetch
+#fetch
