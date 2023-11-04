@@ -7,11 +7,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Tema para nvim.
-Plugin 'sainnhe/sonokai'
-Plugin 'morhetz/gruvbox'
-Plugin 'sainnhe/everforest'
-Plugin 'tomasr/molokai'
-Plugin 'ayu-theme/ayu-vim'
+"Plugin 'sainnhe/sonokai'
+"Plugin 'morhetz/gruvbox'
+"Plugin 'sainnhe/everforest'
+"Plugin 'tomasr/molokai'
+"Plugin 'ayu-theme/ayu-vim'
 Plugin 'ajmwagar/vim-deus'
 "   Airline.
 Plugin 'vim-airline/vim-airline'
@@ -22,10 +22,10 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Plugin para git en vim.
 Plugin 'tpope/vim-fugitive'
 " Snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'garbas/vim-snipmate'
+"Plugin 'honza/vim-snippets'
 " Detección de errores python.
 Plugin 'nvie/vim-flake8'
 " copilot
@@ -38,8 +38,6 @@ Plugin 'bling/vim-bufferline'
 Plugin 'ryanoasis/vim-devicons'
 " Plugin para resaltar cambios en el codigo.
 Plugin 'airblade/vim-gitgutter'
-" Plugin para tmux.
-Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 
@@ -120,9 +118,9 @@ syntax enable " Habilitar resaltado de sintaxys.
 set title " Nopmbre del archivo en la ventana de la terminal.
 set number relativenumber " Indices normales y relativos.
 set mouse=a " Integración del mouse.
-set cursorline " Resalta la linea actual.
-set cursorcolumn " Resalta la columna actual.
-set colorcolumn=121 " Muestra la columna limite a 121.
+set cursorline  Resalta la linea actual.
+set cursorcolumn  Resalta la columna actual.
+set colorcolumn=121 Muestra la columna limite a 121.
 " Indentación.
 set smartindent
 set tabstop=4
@@ -154,7 +152,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx " A
 "colorscheme molokai
 "colorscheme everforest
 colorscheme deus
-set background=dark    " Setting dark mode
+"set background=dark    Setting dark mode
 
 " ======================================================================
 
@@ -167,7 +165,7 @@ nnoremap <leader>S :wq<CR>  " Guardar  y cerrar con <líder> + S
 nnoremap <leader>Q :q!<CR>  " Cerrar descartando cambios con <líder> + Q
 nnoremap <leader>c :q<CR>  " Cerrar con <líder> + C
 
-nnoremap <leader>e :e $MYVIMRC<CR>  " Abrir el archivo init.vim con <líder> + e
+"nnoremap <leader>e :e $MYVIMRC<CR>  " Abrir el archivo init.vim con <líder> + e
 
 " Usar <líder> + y para copiar al portapapeles
 vnoremap <leader>y "+y
@@ -200,13 +198,3 @@ nnoremap <leader>nc :NERDTreeClose<CR>
 nnoremap <leader>vs :vsplit<CR>
 " Split horizontal.
 nnoremap <leader>hs :split<CR>
-
-" Config para tmux.
-let g:tmux_navigator_no_mappings = 1
-
-noremap <silent> <C-h> :<C-U>TmuxNavigateLeft<cr>
-noremap <silent> <C-j> :<C-U>TmuxNavigateDown<cr>
-noremap <silent> <C-k> :<C-U>TmuxNavigateUp<cr>
-noremap <silent> <C-l> :<C-U>TmuxNavigateRight<cr>
-noremap <silent> <C-n> :<C-U>!tmux split-window -h<CR>
-noremap <silent> <C-v> :<C-U>!tmux split-window -v<CR>
