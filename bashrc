@@ -133,14 +133,6 @@ source "$OSH"/oh-my-bash.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-bash libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-bash
-# users are encouraged to define aliases within the OSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias bashconfig="mate ~/.bashrc"
-# alias ohmybash="mate ~/.oh-my-bash"
 #kdr alias
 alias update='sudo pacman -Syu --noconfirm'
 alias updateyay='yay -Syu --noconfirm'
@@ -158,6 +150,7 @@ alias kbash='source ~/.bashrc'
 alias ktop='glances'
 alias fetch='fetchs=("nitch" "rxfetch" "nerdfetch" "neofetch"); cmd="${fetchs[$(shuf -i 0-3 -n 1)]}"; $cmd'
 alias velint='speedtest-cli --simple'
+alias kcache='sudo pacman -Scc'
 # keyboard alias
 # hyprland
 alias lc='hyprctl switchxkblayout at-translated-set-2-keyboard next'
@@ -194,4 +187,4 @@ export NVM_DIR="$HOME/.nvm"
 #export PYTHONPATH to podemos and mambupy
 export PYTHONPATH=/opt/podemosprogresar/lib/python
 export PYTHONPATH=$PYTHONPATH:/opt/mambupy/mambupy
-#fetch
+fetch
