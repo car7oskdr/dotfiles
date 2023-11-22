@@ -147,7 +147,7 @@ alias pt='python'
 alias pt39='source /home/car7os/python39/bin/activate'
 alias pt37='source /home/car7os/python37/bin/activate'
 alias kbash='source ~/.bashrc'
-alias ktop='glances'
+alias ktop='ktops=("glances" "bpytop"); cmd="${ktops[$(shuf -i 0-1 -n 1)]}"; $cmd'
 alias fetch='fetchs=("nitch" "rxfetch" "nerdfetch" "neofetch"); cmd="${fetchs[$(shuf -i 0-3 -n 1)]}"; $cmd'
 alias velint='speedtest-cli --simple'
 alias kcache='sudo pacman -Scc'
@@ -185,6 +185,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #export PYTHONPATH to podemos and mambupy
-export PYTHONPATH=/opt/podemosprogresar/lib/python
-export PYTHONPATH=$PYTHONPATH:/opt/mambupy/mambupy
+export PYTHONPATH=/opt/mambupy/mambupy/mambupy
+export PYTHONPATH=$PYTHONPATH:/opt/podemosprogresar/lib/python
 fetch
