@@ -145,6 +145,7 @@ alias vbash='vim ~/.bashrc'
 alias vhypr='cd ~/.config/hypr && vim'
 alias pt='python'
 alias pt39='source /home/car7os/python39/bin/activate'
+alias pt38='source /home/car7os/python37alejandria/bin/activate'
 alias pt37='source /home/car7os/python37/bin/activate'
 alias kbash='source ~/.bashrc'
 alias ktop='ktops=("glances" "bpytop"); cmd="${ktops[$(shuf -i 0-1 -n 1)]}"; $cmd'
@@ -172,6 +173,9 @@ alias cliente='cd /home/car7os/repositories/podemosProgresar/cliente'
 alias producto='cd /home/car7os/repositories/podemosProgresar/producto'
 alias podemos='cd /home/car7os/repositories/podemosProgresar/podemos'
 alias mambu='cd /home/car7os/repositories/podemosProgresar/mambupy'
+alias identi='cd /home/car7os/repositories/podemosProgresar/identity-management'
+alias organi='cd /home/car7os/repositories/podemosProgresar/organigrama'
+alias alejandria='cd /home/car7os/repositories/podemosProgresar/alejandria'
 #gitkdr alias
 alias develop='git fetch upstream && git merge upstream/develop && git push origin develop'
 alias kmain='git fetch upstream && git merge upstream/main && git push origin main'
@@ -187,4 +191,6 @@ export NVM_DIR="$HOME/.nvm"
 #export PYTHONPATH to podemos and mambupy
 export PYTHONPATH=/opt/mambupy/mambupy/mambupy
 export PYTHONPATH=$PYTHONPATH:/opt/podemosprogresar/lib/python
+export PATH_WEB=/srv/http
+export PATH=$PATH:/home/car7os/liquibase
 fetch
