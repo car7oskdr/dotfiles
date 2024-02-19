@@ -176,6 +176,8 @@ alias mambu='cd /home/car7os/repositories/podemosProgresar/mambupy'
 alias identi='cd /home/car7os/repositories/podemosProgresar/identity-management'
 alias organi='cd /home/car7os/repositories/podemosProgresar/organigrama'
 alias alejandria='cd /home/car7os/repositories/podemosProgresar/alejandria'
+alias reportes='cd /home/car7os/repositories/podemosProgresar/reportes'
+alias feature='cd /home/car7os/repositories/podemosProgresar/feature-toggles'
 #gitkdr alias
 alias develop='git fetch upstream && git merge upstream/develop && git push origin develop'
 alias kmain='git fetch upstream && git merge upstream/main && git push origin main'
