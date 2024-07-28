@@ -9,8 +9,8 @@ export OSH='/home/car7os/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-#OSH_THEME="font"
-OSH_THEME="powerline"
+OSH_THEME="font"
+#OSH_THEME="powerline"
 #OSH_THEME="powerline-multiline"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -152,6 +152,7 @@ alias ktop='ktops=("glances" "bpytop"); cmd="${ktops[$(shuf -i 0-1 -n 1)]}"; $cm
 alias fetch='fetchs=("nitch" "rxfetch" "nerdfetch" "neofetch"); cmd="${fetchs[$(shuf -i 0-3 -n 1)]}"; $cmd'
 alias velint='speedtest-cli --simple'
 alias kcache='sudo pacman -Scc'
+
 # keyboard alias
 # hyprland
 alias lc='hyprctl switchxkblayout at-translated-set-2-keyboard next'
@@ -169,13 +170,27 @@ alias dkitty='cd ~/.config/kitty'
 alias dhyp='cd ~/.config/hypr'
 #dir podemos alias
 alias motor='cd /home/car7os/repositories/podemosProgresar/motor_validaciones'
+alias vmotor='cd /home/car7os/repositories/podemosProgresar/motor_validaciones && code .'
 alias cliente='cd /home/car7os/repositories/podemosProgresar/cliente'
+alias vcliente='cd /home/car7os/repositories/podemosProgresar/cliente && code .'
+alias sci='cd /home/car7os/repositories/podemosProgresar/sci'
+alias vsci='cd /home/car7os/repositories/podemosProgresar/sci && code .'
 alias producto='cd /home/car7os/repositories/podemosProgresar/producto'
+alias vproducto='cd /home/car7os/repositories/podemosProgresar/producto && code .'
 alias podemos='cd /home/car7os/repositories/podemosProgresar/podemos'
+alias vpodemos='cd /home/car7os/repositories/podemosProgresar/podemos && code .'
 alias mambu='cd /home/car7os/repositories/podemosProgresar/mambupy'
+alias vmambu='cd /home/car7os/repositories/podemosProgresar/mambupy && code .'
+alias mamtols='cd /home/car7os/repositories/podemosProgresar/mambu-tools'
+alias vmamtols='cd /home/car7os/repositories/podemosProgresar/mambu-tools && code .'
+alias daniel='cd /home/car7os/repositories/podemosProgresar/daniel'
+alias vdaniel='cd /home/car7os/repositories/podemosProgresar/daniel && code .'
 alias identi='cd /home/car7os/repositories/podemosProgresar/identity-management'
+alias videnti='cd /home/car7os/repositories/podemosProgresar/identity-management && code .'
+alias vorgani='cd /home/car7os/repositories/podemosProgresar/organigrama && code .'
 alias organi='cd /home/car7os/repositories/podemosProgresar/organigrama'
 alias alejandria='cd /home/car7os/repositories/podemosProgresar/alejandria'
+alias valejandria='cd /home/car7os/repositories/podemosProgresar/alejandria && code .'
 alias reportes='cd /home/car7os/repositories/podemosProgresar/reportes'
 alias feature='cd /home/car7os/repositories/podemosProgresar/feature-toggles'
 #gitkdr alias
@@ -195,4 +210,5 @@ export PYTHONPATH=/opt/mambupy/mambupy/mambupy
 export PYTHONPATH=$PYTHONPATH:/opt/podemosprogresar/lib/python
 export PATH_WEB=/srv/http
 export PATH=$PATH:/home/car7os/liquibase
+
 fetch
